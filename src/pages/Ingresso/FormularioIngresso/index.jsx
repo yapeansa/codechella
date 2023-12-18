@@ -4,7 +4,7 @@ import Botao from "../../../components/Botao";
 import Container from "../../../components/Container";
 import ingressoBanner from "/Banner/ingresso.png";
 import arrow from "/ingresso/arrow.svg";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const SecaoIngresso = styled.section`
     color: var(--branco);
@@ -64,8 +64,11 @@ const Input = styled.input`
 
 const FormularioIngresso = ({ nome, setNome, email, setEmail, ingresso, setIngresso, nascimento, setNascimento }) => {
 
+    const navigate = useNavigate();
+
     const tratamento = (evento) => {
-        evento.preventDefault()
+        evento.preventDefault();
+        navigate("compra");
     }
 
     return (
@@ -74,7 +77,7 @@ const FormularioIngresso = ({ nome, setNome, email, setEmail, ingresso, setIngre
             <Container $espacamento="64px">
                 <SecaoIngresso>
                     <h2>Preencha o formulário a seguir:</h2>
-                    <Formulario method="post" action="ingresso/compra" onSubmit={(e) => tratamento(e)}>
+                    <Formulario method="post" onSubmit={(e) => tratamento(e)}>
                         <label>Nome completo:
                             <Input type="text" value={nome} onChange={(e) => setNome(e.target.value)} required />
                         </label>
@@ -96,11 +99,9 @@ const FormularioIngresso = ({ nome, setNome, email, setEmail, ingresso, setIngre
                                 <Input type="date" value={nascimento} onChange={(e) => setNascimento(e.target.value)} />
                             </label>
                         </div>
-                        <Link to="/ingresso/compra" style={{ textDecoration: 'none' }}>
-                            <Botao imagem={arrow}>
-                                Avançar!
-                            </Botao>
-                        </Link>
+                        <Botao imagem={arrow} type="submit">
+                            Avançar!
+                        </Botao>
                     </Formulario>
                 </SecaoIngresso>
             </Container>

@@ -12,7 +12,7 @@ const SecaoCompra = styled.section`
         text-align: center;
         color: var(--branco);
     }
-`
+`;
 
 const IngressoCompra = ({ nome, ingresso, nascimento }) => {
     return (

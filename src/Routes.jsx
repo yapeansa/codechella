@@ -29,16 +29,11 @@ const AppRoutes = () => {
                         <Route path="informacoes" element={<Informacoes />} />
                         <Route path="ingresso/" element={<Ingresso />}>
                             <Route index element={<FormularioIngresso
-                                nome={nome}
-                                setNome={setNome}
-                                email={email}
-                                setEmail={setEmail}
-                                ingresso={ingresso}
-                                setIngresso={setIngresso}
-                                nascimento={nascimento}
-                                setNascimento={setNascimento}
-                            />}
-                            />
+                                nome={nome} setNome={setNome}
+                                email={email} setEmail={setEmail}
+                                ingresso={ingresso} setIngresso={setIngresso}
+                                nascimento={nascimento} setNascimento={setNascimento}
+                            />} />
                             <Route path="compra" element={<IngressoCompra
                                 nome={nome}
                                 ingresso={ingresso}
