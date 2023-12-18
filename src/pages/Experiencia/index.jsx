@@ -14,6 +14,7 @@ const ExperienciaContainer = styled.section`
 `;
 
 const Experiencia = () => {
+    document.title = "CodeChella | Experiência";
     return (
         <>
             <Banner imagemDeFundo={experiencia} texto="A Experiência" />

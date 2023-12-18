@@ -14,13 +14,16 @@ const SecaoCompra = styled.section`
     }
 `
 
-const IngressoCompra = () => {
+const IngressoCompra = ({ nome, ingresso, nascimento }) => {
     return (
         <>
             <Banner imagemDeFundo={comprando} texto="Seu ingresso está aqui!" />
             <Container $espacamento="64px">
                 <SecaoCompra>
                     <h2>Uhul, agora sim! Seu ingresso está aqui, apresente na entrada do evento e divirta-se!</h2>
+                    <p>{nome}</p>
+                    <p>{ingresso}</p>
+                    <p>{nascimento}</p>
                 </SecaoCompra>
             </Container>
         </>

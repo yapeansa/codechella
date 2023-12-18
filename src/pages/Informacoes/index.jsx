@@ -50,6 +50,8 @@ const Bodying = styled.div`
 `;
 
 const Informacoes = () => {
+    document.title = "CodeChella | Informações"
+
     const [display, setDisplay] = useState(infos);
 
     const toggleBox = (id) => {

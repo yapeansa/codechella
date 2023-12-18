@@ -103,6 +103,8 @@ const Detalhes = styled.div`
 `;
 
 const MapaDeSetores = () => {
+    document.title = "CodeChella | Mapa de Setores"
+
     return (
         <>
             <Banner imagemDeFundo={bannerMapa} texto="Mapa de Setores" />

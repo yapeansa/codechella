@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Banner from "../../../components/Banner";
 import Botao from "../../../components/Botao";
 import Container from "../../../components/Container";
-import ingresso from "/Banner/ingresso.png";
+import ingressoBanner from "/Banner/ingresso.png";
 import arrow from "/ingresso/arrow.svg";
 import { Link } from "react-router-dom";
 
@@ -62,7 +62,7 @@ const Input = styled.input`
     border: none;
 `;
 
-const FormularioIngresso = () => {
+const FormularioIngresso = ({ nome, setNome, email, setEmail, ingresso, setIngresso, nascimento, setNascimento }) => {
 
     const tratamento = (evento) => {
         evento.preventDefault()
@@ -70,30 +70,30 @@ const FormularioIngresso = () => {
 
     return (
         <>
-            <Banner imagemDeFundo={ingresso} texto="Garanta seu Ingresso" />
+            <Banner imagemDeFundo={ingressoBanner} texto="Garanta seu Ingresso" />
             <Container $espacamento="64px">
                 <SecaoIngresso>
                     <h2>Preencha o formulário a seguir:</h2>
                     <Formulario method="post" action="ingresso/compra" onSubmit={(e) => tratamento(e)}>
                         <label>Nome completo:
-                            <Input type="text" required />
+                            <Input type="text" value={nome} onChange={(e) => setNome(e.target.value)} required />
                         </label>
                         <label>E-mail:
-                            <Input type="email" required />
+                            <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                         </label>
                         <div className="especificidades">
                             <label>
                                 Tipo de ingresso:
-                                <select>
-                                    <option>Pista Premium</option>
-                                    <option selected>Pista Comum</option>
-                                    <option>Cadeiras Térreo</option>
-                                    <option>Cadeiras Superiores</option>
-                                    <option>Rampas</option>
+                                <select value={ingresso} onChange={(e) => setIngresso(e.target.value)}>
+                                    <option value="premium">Pista Premium</option>
+                                    <option value="comum">Pista Comum</option>
+                                    <option value="terreo">Cadeiras Térreo</option>
+                                    <option value="superiores">Cadeiras Superiores</option>
+                                    <option value="rampas">Rampas</option>
                                 </select>
                             </label>
                             <label>Data de nascimento:
-                                <Input type="date" />
+                                <Input type="date" value={nascimento} onChange={(e) => setNascimento(e.target.value)} />
                             </label>
                         </div>
                         <Link to="/ingresso/compra" style={{ textDecoration: 'none' }}>

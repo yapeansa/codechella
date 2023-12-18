@@ -56,6 +56,8 @@ const Lines = styled.div`
 `;
 
 const PaginaInicial = () => {
+    document.title = "CodeChella | Página Inicial"
+
     const lineups = [
         {
             id: 1,
