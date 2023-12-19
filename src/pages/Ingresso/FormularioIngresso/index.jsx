@@ -88,11 +88,11 @@ const FormularioIngresso = ({ nome, setNome, email, setEmail, ingresso, setIngre
                             <label>
                                 Tipo de ingresso:
                                 <select value={ingresso} onChange={(e) => setIngresso(e.target.value)}>
-                                    <option value="premium">Pista Premium</option>
-                                    <option value="comum">Pista Comum</option>
-                                    <option value="terreo">Cadeiras Térreo</option>
-                                    <option value="superiores">Cadeiras Superiores</option>
-                                    <option value="rampas">Rampas</option>
+                                    <option value="Pista Premium">Pista Premium</option>
+                                    <option value="Pista Comum">Pista Comum</option>
+                                    <option value="Cadeiras Térreo">Cadeiras Térreo</option>
+                                    <option value="Cadeiras Superiores">Cadeiras Superiores</option>
+                                    <option value="Rampas">Rampas</option>
                                 </select>
                             </label>
                             <label>Data de nascimento:
