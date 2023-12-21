@@ -1,22 +1,20 @@
-//import React from 'react';
+import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Link } from 'react-router-dom';
 
 const MyMarkdownComponent = ({ markdownText }) => {
-    const renderers = {
-        link: ({ href, children }) => {
-            // Check if the link is an internal link (starts with '/')
-            if (href && href.startsWith('/')) {
-                // Use react-router's Link component for internal links
-                return <Link to={href}>{children}</Link>;
-            }
+  const components = {
+    // Use a custom Link component for internal links
+    a: ({ node, ...props }) => {
+      if (props.href && props.href.startsWith('/')) {
+        return <Link to={props.href}>{props.children}</Link>;
+      }
 
-            // Default behavior for external links
-            return <a href={href}>{children}</a>;
-        },
-    };
+      return <a {...props}>{props.children}</a>;
+    },
+  };
 
-    return <ReactMarkdown components={renderers} children={markdownText} />;
+  return <ReactMarkdown components={components}>{markdownText}</ReactMarkdown>;
 };
 
 export default MyMarkdownComponent;
