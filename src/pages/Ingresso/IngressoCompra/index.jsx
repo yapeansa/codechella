@@ -71,7 +71,9 @@ const IngressoCompra = ({ nome, ingresso, nascimento }) => {
                             <div className="ingresso__textos">
                                 <h2>{nome}</h2>
                                 <div>
+                                    <p>Ingresso Costesia</p>
                                     <p>Tipo de ingresso: {ingresso}</p>
+                                    <p>Data: 11/03</p>
                                     <p>Local: São Paulo - SP</p>
                                 </div>
                             </div>

@@ -72,7 +72,7 @@ const Header = () => {
         {
             id: 2,
             titulo: "Mapa de Setores",
-            caminho: "mapa"
+            caminho: "setores"
         },
         {
             id: 3,

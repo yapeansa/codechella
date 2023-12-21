@@ -8,6 +8,7 @@ import Titulo from "./Titulo";
 import BannerBottom from "./BannerBottom";
 import Secao from "../../components/Secao";
 import comprar from "/inicio/comprar-btn.svg";
+import { Link } from "react-router-dom";
 
 const LineUp = styled.section`
     margin: 96px 0 0;
@@ -115,9 +116,11 @@ const PaginaInicial = () => {
                         <p>
                             Hora de programar nossa memória com novas lembranças! Uma nova experiência sobre música, linguagens e, claro, tecnologia! Somos um festival diverso, com vários artistas e referências. Divirta-se!
                         </p>
-                        <Botao imagem={comprar}>
-                            Comprar ingresso!
-                        </Botao>
+                        <Link to="ingresso" style={{ textDecoration: "none" }}>
+                            <Botao imagem={comprar}>
+                                Comprar ingresso!
+                            </Botao>
+                        </Link>
                     </div>
                 </Secao>
                 <LineUp>

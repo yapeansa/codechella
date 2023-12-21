@@ -25,7 +25,7 @@ const AppRoutes = () => {
                     <Route path="/" element={<CorpoApp />}>
                         <Route index element={<PaginaInicial />} />
                         <Route path="experiencia" element={<Experiencia />} />
-                        <Route path="mapa" element={<MapaDeSetores />} />
+                        <Route path="setores" element={<MapaDeSetores />} />
                         <Route path="informacoes" element={<Informacoes />} />
                         <Route path="ingresso/" element={<Ingresso />}>
                             <Route index element={<FormularioIngresso

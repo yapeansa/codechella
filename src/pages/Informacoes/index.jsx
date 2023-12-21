@@ -5,6 +5,7 @@ import info from "/Banner/info.png";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { useState } from "react";
 import infos from "./Info/db.json";
+import Markdown from "react-markdown";
 
 const SecaoInformacoes = styled.section`
     .titulo__info {
@@ -42,10 +43,13 @@ const Bodying = styled.div`
     background: var(--azul-claro);
     padding: 16px;
     display: ${props => props.$display ? 'block' : 'none'};
-    p {
+    .texto__info {
         font-size: 20px;
         font-weight: 500;
         line-height: 40px;
+        a {
+            color: var(--preto);
+        }
     }
 `;
 
@@ -80,7 +84,9 @@ const Informacoes = () => {
                                     <IoMdArrowDropdown size={25} />
                                 </CaixaTitulo>
                                 <Bodying $display={campo.display}>
-                                    <p>{campo.texto}</p>
+                                    <p className="texto__info">
+                                        <Markdown>{campo.texto}</Markdown>
+                                    </p>
                                 </Bodying>
                             </div>
                         )}

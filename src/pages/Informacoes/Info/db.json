@@ -2,7 +2,7 @@
     {
         "id": 1,
         "titulo": "Quais serão as atrações?",
-        "texto": "Teremos dois dias de shows, o primeiro (11/03) com bandas de rock, e o segundo (12/03) com bandas pop. Confira o line-up em detalhes clicando neste link!",
+        "texto": "Teremos dois dias de shows, o primeiro (11/03) com bandas de rock, e o segundo (12/03) com bandas pop. [Confira o line-up em detalhes clicando neste link](/)!",
         "display": true
     },
     {
@@ -14,7 +14,7 @@
     {
         "id": 3,
         "titulo": "Quais são os setores disponíveis?",
-        "texto": "Os setores disponíveis neste festival são: Pista Premium, Pista Comum, Cadeiras Térreo, Cadeiras Superiores e Rampas. Confira os detalhes clicando neste link!",
+        "texto": "Os setores disponíveis neste festival são: Pista Premium, Pista Comum, Cadeiras Térreo, Cadeiras Superiores e Rampas. [Confira os detalhes clicando neste link](/setores)!",
         "display": false
     },
     {

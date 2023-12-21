@@ -17,6 +17,7 @@ const EstilosGlobais = createGlobalStyle`
         --bullet-three: #01A89E;
         --bullet-four: #3F51B5;
         --bullet-five: #0E7DF1;
+        --btn-hover: #2E7BA2;
     }
 
     * {

@@ -12,6 +12,10 @@ const BotaoEstilizado = styled.button`
     border-radius: 16px;
     max-width: 261px;
     cursor: pointer;
+    transition: all .3s ease-in-out;
+    &:hover {
+        background-color: var(--btn-hover);
+    }
     p {
         font-size: 20px;
         line-height: 40px;
