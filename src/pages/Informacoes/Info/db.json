@@ -14,7 +14,7 @@
     {
         "id": 3,
         "titulo": "Quais são os setores disponíveis?",
-        "texto": "Os setores disponíveis neste festival são: Pista Premium, Pista Comum, Cadeiras Térreo, Cadeiras Superiores e Rampas. [Confira os detalhes clicando neste link](setores)!",
+        "texto": "Os setores disponíveis neste festival são: Pista Premium, Pista Comum, Cadeiras Térreo, Cadeiras Superiores e Rampas. [Confira os detalhes clicando neste link](/setores)!",
         "display": false
     },
     {

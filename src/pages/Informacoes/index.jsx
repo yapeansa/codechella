@@ -6,6 +6,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { useState } from "react";
 import infos from "./Info/db.json";
 import Markdown from "react-markdown";
+import MyMarkdownComponent from "./MyMarkdownComponent";
 
 const SecaoInformacoes = styled.section`
     .titulo__info {
@@ -84,9 +85,9 @@ const Informacoes = () => {
                                     <IoMdArrowDropdown size={25} />
                                 </CaixaTitulo>
                                 <Bodying $display={campo.display}>
-                                    <p className="texto__info">
-                                        <Markdown>{campo.texto}</Markdown>
-                                    </p>
+                                    <div className="texto__info">
+                                        <MyMarkdownComponent markdownText={campo.texto} />
+                                    </div>
                                 </Bodying>
                             </div>
                         )}
