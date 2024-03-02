@@ -52,6 +52,17 @@ const ContainerFooter = styled.div`
             max-width: 100%;
         }
     }
+    @media screen and (max-width: 500px) {
+        .social {
+            .links-sociais {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+        .texto-rodape {
+            text-align: center;
+        }
+    }
 `;
 
 const Footer = () => {

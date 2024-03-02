@@ -31,6 +31,13 @@ const Secao = styled.section`
     @media screen and (max-width: 768px) {
         flex-direction: column;
     }
+    @media screen and (max-width: 500px) {
+        .banda-tocando {
+            height: 381px;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+    }
 `;
 
 export default Secao;

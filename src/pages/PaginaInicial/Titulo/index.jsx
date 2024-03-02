@@ -40,6 +40,17 @@ const TituloEstilizado = styled.h3`
             right: -124px;
         }
     }
+    @media screen and (max-width: 500px) {
+        font-size: 28px;
+        &::before {
+            width: 0;
+            left: 0;
+        }
+        &::after {
+            width: 0;
+            right: 0;
+        }
+    }
 `;
 
 const Titulo = ({ children }) => {

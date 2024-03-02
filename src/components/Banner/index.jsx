@@ -15,6 +15,11 @@ const ContainerBanner = styled.div`
         font-size: 64px;
         text-align: center;
     }
+    @media screen and (max-width: 500px) {
+        h2 {
+            font-size: 34px;
+        }
+    }
 `;
 
 const Banner = ({ imagemDeFundo, texto }) => {

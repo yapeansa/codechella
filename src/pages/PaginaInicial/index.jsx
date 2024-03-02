@@ -19,6 +19,9 @@ const LineUp = styled.section`
         color: var(--branco);
         text-align: center;
     }
+    @media screen and (max-width: 500px) {
+        h2 { font-size: 48px; }
+    }
 `;
 
 const BoxLineUp = styled.div`
@@ -110,7 +113,7 @@ const PaginaInicial = () => {
             <Banner imagemDeFundo={home} texto="Boas vindas ao #CodeChella2023!" />
             <Container $espacamento="64px" $interno="120px">
                 <Secao>
-                    <img src={bandPlaying} alt="Uma imagem aqui" />
+                    <img src={bandPlaying} alt="Banda tocando" className="banda-tocando" />
                     <div>
                         <h2>&lt; 11 e 12 de Março &gt;<br />Aluródromo de São Paulo</h2>
                         <p>
