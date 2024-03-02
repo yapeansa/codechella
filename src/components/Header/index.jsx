@@ -60,6 +60,17 @@ const HeaderContainer = styled.div`
             }
         }
     }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        gap: 1rem;
+        ul {
+            gap: 3rem;
+            .link {
+                font-size: 18px;
+            }
+        }
+    }
 `;
 
 const Header = () => {

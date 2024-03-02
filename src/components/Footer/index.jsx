@@ -40,6 +40,18 @@ const ContainerFooter = styled.div`
         line-height: 40px;
         font-weight: 500;
     }
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        gap: 2rem;
+        .social {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .texto-rodape {
+            max-width: 100%;
+        }
+    }
 `;
 
 const Footer = () => {
@@ -70,7 +82,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <p className="texto-rodape">
-                        Desenvolvido por Yago.<br />Projeto fictício sem fins comerciais.
+                        Desenvolvido por Yago. Projeto fictício sem fins comerciais.
                     </p>
                 </ContainerFooter>
             </Container>

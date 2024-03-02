@@ -30,6 +30,16 @@ const TituloEstilizado = styled.h3`
         right: -392px;
         background: var(--verde-escuro);
     }
+    @media screen and (max-width: 768px) {
+        &::before {
+            width: 84px;
+            left: -124px;
+        }
+        &::after {
+            width: 84px;
+            right: -124px;
+        }
+    }
 `;
 
 const Titulo = ({ children }) => {
