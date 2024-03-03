@@ -21,7 +21,7 @@ const Experiencia = () => {
             <Container $espacamento="64px">
                 <ExperienciaContainer>
                     <Secao $alinhamento_texto="left" $alinhar_itens="flex-start">
-                        <img src={woman} alt="Mulher feliz" />
+                        <img src={woman} alt="Mulher feliz" className="imagem-exp" />
                         <div>
                             <h2>Acessibilidade e Inclusão</h2>
                             <p>
@@ -30,7 +30,7 @@ const Experiencia = () => {
                         </div>
                     </Secao>
                     <Secao $alinhamento_texto="right" $alinhar_itens="flex-end">
-                        <img src={recycle} alt="Pessoa reciclando" className="ordem-um" />
+                        <img src={recycle} alt="Pessoa reciclando" className="ordem-um imagem-exp" />
                         <div className="ordem-dois">
                             <h2>Sustentabilidade</h2>
                             <p>
@@ -39,7 +39,7 @@ const Experiencia = () => {
                         </div>
                     </Secao>
                     <Secao $alinhamento_texto="left" $alinhar_itens="flex-start">
-                        <img src={diversao} alt="Mulher feliz" />
+                        <img src={diversao} alt="Mulher feliz" className="imagem-exp" />
                         <div>
                             <h2>Atrações</h2>
                             <p>

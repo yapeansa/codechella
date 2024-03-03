@@ -12,6 +12,9 @@ const ContainerMapa = styled.section`
     gap: 48px;
     align-items: center;
     color: var(--branco);
+    .mapa-setores {
+        max-width: 100%;
+    }
     div {
         display: flex;
         flex-direction: column;
@@ -62,6 +65,10 @@ const ContainerMapa = styled.section`
 
     @media screen and (max-width: 768px) {
         flex-direction: column;
+    }
+
+    @media screen and (max-width: 500px) {
+        .mapa-setores {}
     }
 `;
 
@@ -118,6 +125,15 @@ const Detalhes = styled.div`
             margin: 0 auto;
         }
     }
+    @media screen and (max-width: 500px) {
+        margin-top: 0;
+        img {
+            max-width: 312px;
+            height: 239px;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+    }
 `;
 
 const MapaDeSetores = () => {
@@ -128,7 +144,7 @@ const MapaDeSetores = () => {
             <Banner imagemDeFundo={bannerMapa} texto="Mapa de Setores" />
             <Container $espacamento="64px">
                 <ContainerMapa>
-                    <img src={mapa} alt="Mapa de Setores" />
+                    <img src={mapa} alt="Mapa de Setores" className="mapa-setores" />
                     <div>
                         <h2>Legenda:</h2>
                         <ul>

@@ -41,7 +41,7 @@ const Secao = styled.section`
         .ordem-dois { order: 2; }
     }
     @media screen and (max-width: 500px) {
-        .banda-tocando {
+        .banda-tocando, .imagem-exp {
             height: 381px;
             object-fit: cover;
             border-radius: 16px;
