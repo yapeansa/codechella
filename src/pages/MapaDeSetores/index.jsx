@@ -59,6 +59,10 @@ const ContainerMapa = styled.section`
             }
         }
     }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
 `;
 
 const DetalhesSetores = styled.section`
@@ -75,6 +79,13 @@ const DetalhesSetores = styled.section`
         display: flex;
         justify-content: center;
         gap: 24px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .detalhes_setores {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 `;
 
@@ -100,6 +111,13 @@ const Detalhes = styled.div`
         }
     }
     .espec { margin-top: 106px; }
+    @media screen and (max-width: 768px) {
+        max-width: 648px;
+        img {
+            max-width: 382px;
+            margin: 0 auto;
+        }
+    }
 `;
 
 const MapaDeSetores = () => {

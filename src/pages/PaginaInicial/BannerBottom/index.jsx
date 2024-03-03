@@ -6,6 +6,7 @@ const BannerBottom = styled.div`
     background: url(${guitar}) no-repeat center / cover;
     mix-blend-mode: multiply; 
     height: 340px;
+    @media screen and (max-width: 768px) {}
 `;
 
 export default BannerBottom;

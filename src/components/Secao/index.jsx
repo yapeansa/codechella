@@ -28,8 +28,17 @@ const Secao = styled.section`
             font-size: 20px;
         }
     }
+    .ordem-um { order: 2; }
+    .ordem-dois { order: 1; }
     @media screen and (max-width: 768px) {
         flex-direction: column;
+        text-align: center;
+        div {
+            order: 2;
+            align-items: center;
+        }
+        .ordem-um { order: 1; }
+        .ordem-dois { order: 2; }
     }
     @media screen and (max-width: 500px) {
         .banda-tocando {

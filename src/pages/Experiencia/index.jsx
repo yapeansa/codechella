@@ -30,8 +30,8 @@ const Experiencia = () => {
                         </div>
                     </Secao>
                     <Secao $alinhamento_texto="right" $alinhar_itens="flex-end">
-                        <img src={recycle} alt="Pessoa reciclando" style={{ order: 2 }} />
-                        <div style={{ order: 1 }}>
+                        <img src={recycle} alt="Pessoa reciclando" className="ordem-um" />
+                        <div className="ordem-dois">
                             <h2>Sustentabilidade</h2>
                             <p>
                                 Queremos estar aqui celebrando daqui a 50, 100 anos! Por isso, levamos o futuro do nosso planeta a sério. Nosso festival é carbono zero, com utilização de copos retornáveis, coleta e destinação adequada de resíduos, e transporte coletivo.
