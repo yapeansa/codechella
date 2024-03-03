@@ -48,6 +48,11 @@ const Formulario = styled.form`
             }
         }
     }
+    @media screen and (max-width: 768px) {
+        .especificidades {
+            flex-direction: column;
+        }
+    }
 `;
 
 const Input = styled.input`
