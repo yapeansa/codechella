@@ -54,15 +54,16 @@ const HeaderContainer = styled.div`
                 &::before {
                     content: '';
                     position: absolute;
-                    left: -100%;
+                    left: 50%;
                     bottom: 0;
-                    width: 100%;
+                    width: 0;
                     height: 2px;
                     background: var(--branco);
                     transition: all .3s ease-in-out;
                 }
                 &:hover {
                     &::before {
+                        width: 100%;
                         left: 0;
                     }
                 }
