@@ -13,4 +13,4 @@ Ao explorar o framework React, utilizamos poderosas ferramentas como: `Styled-Co
 
 ## Imagem do projeto
 
-[./public/codechella.png](./public/codechella.png)
+![CodeChella Festival](https://github.com/yapeansa/codechella/blob/main/public/codechella.png)
