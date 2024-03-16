@@ -41,6 +41,9 @@ const Ingresso = styled.div`
     .detalhes__ingresso {
         display: flex;
         gap: 48px;
+        .qr-code {
+            max-width: 189px;
+        }
         .ingresso__textos {
             display: flex;
             flex-direction: column;
@@ -50,6 +53,16 @@ const Ingresso = styled.div`
                 font-size: 32px;
                 font-weight: 700;
             }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .detalhes__ingresso {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            h2 { margin: 0 auto; }
         }
     }
 `;
@@ -67,7 +80,7 @@ const IngressoCompra = ({ nome, ingresso, nascimento }) => {
                             <img src={codechellaLogoiA} alt="Logo CodeChella Abreviado" />
                         </div>
                         <div className="detalhes__ingresso">
-                            <img src={qrCodeIngresso} alt="QR code do ingresso" />
+                            <img src={qrCodeIngresso} className="qr-code" alt="QR code do ingresso" />
                             <div className="ingresso__textos">
                                 <h2>{nome}</h2>
                                 <div>

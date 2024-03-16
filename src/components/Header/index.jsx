@@ -118,6 +118,12 @@ const HeaderContainer = styled.div`
                         margin-left: -73px;
                         color: var(--branco);
                     }
+                    &:hover {
+                        &::before {
+                            width: 146px;
+                            left: 50%;
+                        }
+                    }
                     &:last-child {
                         &::before {
                             width: 0;
