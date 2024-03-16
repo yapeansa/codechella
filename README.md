@@ -1,8 +1,16 @@
-# React + Vite
+# Projeto CodeChella
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O CodeChella é um festival para amantes de música. Um projeto fictício criado em React.
 
-Currently, two official plugins are available:
+## Tecnologias utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- HTML;
+- CSS;
+- Javascript;
+- React.
+
+Ao explorar o framework React, utilizamos poderosas ferramentas como: `Styled-Components`, `SASS`, `React-Router-DOM`. Além de gerenciamento de estados com o hook do React `useState`.
+
+## Imagem do projeto
+
+[./public/codechella.png](./public/codechella.png)
