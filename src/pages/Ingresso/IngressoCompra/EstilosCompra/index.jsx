@@ -1,3 +1,5 @@
+import { styled } from "styled-components";
+
 const SecaoCompra = styled.section`
     max-width: 792px;
     margin: 0 auto;

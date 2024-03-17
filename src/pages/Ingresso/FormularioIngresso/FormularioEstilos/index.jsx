@@ -1,3 +1,5 @@
+import { styled } from "styled-components";
+
 const SecaoIngresso = styled.section`
     color: var(--branco);
     h2 {
