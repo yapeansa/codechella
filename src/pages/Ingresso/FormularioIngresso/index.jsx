@@ -5,74 +5,23 @@ import Container from "../../../components/Container";
 import ingressoBanner from "/Banner/ingresso.png";
 import arrow from "/ingresso/arrow.svg";
 import { useNavigate } from "react-router-dom";
+import { SecaoIngresso, Formulario, Input } from "./FormularioEstilos";
 
-const SecaoIngresso = styled.section`
-    color: var(--branco);
-    h2 {
-        font-family: var(--fonte-titulos);
-        font-size: 48px;
-        font-weight: 400;
-        text-align: center;
-    }
-`;
-
-const Formulario = styled.form`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 32px;
-    max-width: 795px;
-    margin: 0 auto;
-    font-size: 32px;
-    font-weight: 700;
-    margin-top: 48px;
-    label {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-    }
-    .especificidades {
-        width: 100%;
-        display: flex;
-        gap: 24px;
-        label {
-            flex: 1;
-            select {
-                height: 48px;
-                border: none;
-                padding: 0 10px;
-                line-height: 40px;
-                font-size: 20px;
-                outline: none;
-            }
-        }
-    }
-    @media screen and (max-width: 768px) {
-        .especificidades {
-            flex-direction: column;
-        }
-    }
-`;
-
-const Input = styled.input`
-    height: 48px;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 40px;
-    outline: none;
-    padding: 0 10px;
-    display: block;
-    width: 100%;
-    border: none;
-`;
-
-const FormularioIngresso = ({ nome, setNome, email, setEmail, ingresso, setIngresso, nascimento, setNascimento }) => {
+const FormularioIngresso = ({ infos, acoes }) => {
 
     const navigate = useNavigate();
 
     const tratamento = (evento) => {
         evento.preventDefault();
+        const meuIngresso = {
+            nome: infos.nome,
+            email: infos.email,
+            tipo: infos.tipo,
+            nascimento: infos.nascimento 
+        };
+        const ingressos = [];
+        ingressos.push({...meuIngresso});
+        localStorage.setItem("meusIngressos", JSON.stringify(ingressos));
         navigate("compra");
     }
 
@@ -84,15 +33,15 @@ const FormularioIngresso = ({ nome, setNome, email, setEmail, ingresso, setIngre
                     <h2>Preencha o formulário a seguir:</h2>
                     <Formulario method="post" onSubmit={(e) => tratamento(e)}>
                         <label>Nome completo:
-                            <Input type="text" value={nome} onChange={(e) => setNome(e.target.value)} required />
+                            <Input type="text" value={infos.nome} onChange={(e) => acoes.setNome(e.target.value)} required />
                         </label>
                         <label>E-mail:
-                            <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                            <Input type="email" value={infos.email} onChange={(e) => acoes.setEmail(e.target.value)} />
                         </label>
                         <div className="especificidades">
                             <label>
                                 Tipo de ingresso:
-                                <select value={ingresso} onChange={(e) => setIngresso(e.target.value)}>
+                                <select value={infos.ingresso} onChange={(e) => acoes.setTipo(e.target.value)}>
                                     <option value="Pista Premium">Pista Premium</option>
                                     <option value="Pista Comum">Pista Comum</option>
                                     <option value="Cadeiras Térreo">Cadeiras Térreo</option>
@@ -101,7 +50,7 @@ const FormularioIngresso = ({ nome, setNome, email, setEmail, ingresso, setIngre
                                 </select>
                             </label>
                             <label>Data de nascimento:
-                                <Input type="date" value={nascimento} onChange={(e) => setNascimento(e.target.value)} />
+                                <Input type="date" value={infos.nascimento} onChange={(e) => acoes.setNascimento(e.target.value)} />
                             </label>
                         </div>
                         <Botao imagem={arrow} type="submit">

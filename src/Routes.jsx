@@ -14,7 +14,7 @@ import { useState } from "react";
 const AppRoutes = () => {
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
-    const [ingresso, setIngresso] = useState('');
+    const [tipo, setTipo] = useState('');
     const [nascimento, setNascimento] = useState('');
 
     return (
@@ -29,16 +29,10 @@ const AppRoutes = () => {
                         <Route path="informacoes" element={<Informacoes />} />
                         <Route path="ingresso/" element={<Ingresso />}>
                             <Route index element={<FormularioIngresso
-                                nome={nome} setNome={setNome}
-                                email={email} setEmail={setEmail}
-                                ingresso={ingresso} setIngresso={setIngresso}
-                                nascimento={nascimento} setNascimento={setNascimento}
+                                infos={{nome, email, tipo, nascimento}}
+                                acoes={{setNome, setEmail, setTipo, setNascimento}}
                             />} />
-                            <Route path="compra" element={<IngressoCompra
-                                nome={nome}
-                                ingresso={ingresso}
-                                nascimento={nascimento}
-                            />} />
+                            <Route path="compra" element={<IngressoCompra />} />
                         </Route>
                         <Route path="*" element={<NotFound />} />
                     </Route>
