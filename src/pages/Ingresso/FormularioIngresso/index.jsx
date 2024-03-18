@@ -19,11 +19,11 @@ const FormularioIngresso = ({ infos, acoes }) => {
             tipo: infos.tipo,
             nascimento: infos.nascimento 
         };
-        const ingressos = [];
+        const ingressos = JSON.parse(localStorage.getItem("meusIngressos")) || [];
         ingressos.push({...meuIngresso});
         localStorage.setItem("meusIngressos", JSON.stringify(ingressos));
         navigate("compra");
-    }
+    };
 
     return (
         <>
@@ -61,6 +61,6 @@ const FormularioIngresso = ({ infos, acoes }) => {
             </Container>
         </>
     );
-}
+};
 
 export default FormularioIngresso;

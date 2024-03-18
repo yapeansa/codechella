@@ -25,10 +25,10 @@ const IngressoCompra = () => {
                         <div className="detalhes__ingresso">
                             <img src={qrCodeIngresso} className="qr-code" alt="QR code do ingresso" />
                             <div className="ingresso__textos">
-                                <h2>{completo[0].nome}</h2>
+                                <h2>{completo[completo.length -1].nome}</h2>
                                 <div>
                                     <p>Ingresso Costesia</p>
-                                    <p>Tipo de ingresso: {completo[0].tipo}</p>
+                                    <p>Tipo de ingresso: {completo[completo.length -1].tipo}</p>
                                     <p>Data: 11/03</p>
                                     <p>Local: São Paulo - SP</p>
                                 </div>
