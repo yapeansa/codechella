@@ -14,13 +14,20 @@ const FormularioIngresso = ({ infos, acoes }) => {
     const tratamento = (evento) => {
         evento.preventDefault();
         const meuIngresso = {
+            id: undefined,
             nome: infos.nome,
             email: infos.email,
             tipo: infos.tipo,
             nascimento: infos.nascimento 
         };
         const ingressos = JSON.parse(localStorage.getItem("meusIngressos")) || [];
-        ingressos.push({...meuIngresso});
+        if (ingressos.length > 0) {
+            meuIngresso.id = ingressos[ingressos.length - 1].id + 1;
+            ingressos[ingressos.length] = {...meuIngresso};
+        } else {
+            meuIngresso.id = 1;
+            ingressos[0] = {...meuIngresso};
+        }
         localStorage.setItem("meusIngressos", JSON.stringify(ingressos));
         navigate("compra");
     };
